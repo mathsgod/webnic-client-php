@@ -15,7 +15,7 @@ class Domain
     public function balance()
     {
         $resp = $this->client->get("domain/balance");
-        return json_decode($resp->getBody()->getContents(), true);
+        return json_decode($resp->getBody()->getContents(), true)["data"];
     }
 
     public function historyLog(string $domain_name)
@@ -25,7 +25,7 @@ class Domain
                 "domainName" => $domain_name
             ]
         ]);
-        return json_decode($resp->getBody()->getContents(), true);
+        return json_decode($resp->getBody()->getContents(), true)["data"];
     }
 
     public function whois(string $domain_name, bool $universal = true)
@@ -41,6 +41,26 @@ class Domain
         }
 
         $resp = $this->client->get("domain/whois", [
+            "query" => [
+                "domainName" => $domain_name
+            ]
+        ]);
+        return json_decode($resp->getBody()->getContents(), true)["data"];
+    }
+
+    public function privacy(string $domain_name)
+    {
+        $resp = $this->client->get("domain/privacy", [
+            "query" => [
+                "domainName" => $domain_name
+            ]
+        ]);
+        return json_decode($resp->getBody()->getContents(), true);
+    }
+
+    public function query(string $domain_name)
+    {
+        $resp = $this->client->get("domain/query", [
             "query" => [
                 "domainName" => $domain_name
             ]

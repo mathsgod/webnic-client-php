@@ -21,4 +21,18 @@ class DNS
     {
         return new DNS\Product($this->client);
     }
+
+    public function domains()
+    {
+        return new DNS\Domains($this->client);
+    }
+    public function domain(string $domain)
+    {
+        return new DNS\Domain($this->client, $domain);
+    }
+
+    public function countries()
+    {
+        return json_decode($this->client->get("dns/countries")->getBody()->getContents(), true)["data"];
+    }
 }
