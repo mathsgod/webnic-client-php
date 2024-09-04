@@ -1,4 +1,4 @@
-# WebNIC Client PHP
+# WebNIC Client
 
 [WebNIC](https://www.webnic.cc/) API Client for PHP
 
