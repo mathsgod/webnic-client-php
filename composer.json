@@ -6,6 +6,7 @@
             "email": "mathsgod@yahoo.com"
         }
     ],
+    "license": "MIT",
     "require": {
         "guzzlehttp/guzzle": "^7.9"
     },
