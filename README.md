@@ -24,6 +24,6 @@ $client = new Client('your-client-id', 'your-secret');
 ### Check Whois
 ```php
 
-print_r($client->dns->whois('example.com'));
+print_r($client->domain()->whois('example.com'));
 
 ```
