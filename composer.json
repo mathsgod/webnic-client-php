@@ -1,0 +1,17 @@
+{
+    "name": "mathsgod/webnic-client-php",
+    "authors": [
+        {
+            "name": "Raymond Chong",
+            "email": "mathsgod@yahoo.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "WebNIC\\": "src/"
+        }
+    }
+}
