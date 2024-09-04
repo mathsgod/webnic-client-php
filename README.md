@@ -1,5 +1,8 @@
 # WebNIC Client PHP
 
+[WebNIC](https://www.webnic.cc/) API Client for PHP
+
+
 # install
 ```
 composer require mathsgod/webnic-client-php
